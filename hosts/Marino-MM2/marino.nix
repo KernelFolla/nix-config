@@ -1,4 +1,8 @@
-{ pkgs, pwnvim, ... }: {
+{
+  pkgs,
+  pwnvim,
+  ...
+}: {
   # Don't change this when you change package input. Leave it alone.
   home.stateVersion = "23.05";
   # specify my home-manager configs
@@ -14,19 +18,26 @@
     CLICLOLOR = 1;
     EDITOR = "nvim";
   };
+
   programs.bat.enable = true;
   programs.bat.config.theme = "TwoDark";
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
   programs.exa.enable = true;
+
   programs.zsh.enable = true;
   programs.zsh.enableCompletion = true;
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.syntaxHighlighting.enable = true;
-  programs.zsh.shellAliases = {
+  home.shellAliases = {
     ls = "ls --color=auto -F";
-    nixswitch = "darwin-rebuild switch --flake ~/_work/.#";
-    nixup = "pushd ~/_work; nix flake update; nixswitch; popd";
+    nixswitch = "darwin-rebuild switch --flake ~/_work/marino/nix-config.#";
+    nixup = "pushd ~/_work/marino/nix-config; nix flake update; nixswitch; popd";
+    gst = "git status";
+    q = "exit";
+    n = "npm";
+    nr = "npm run";
+    m = "make";
   };
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;
@@ -40,7 +51,7 @@
     enable = true;
     userEmail = "kernelfolla@gmail.com";
     userName = "Marino Di Clemente";
-    ignores = [ "*~" ".DS_Store" ];
+    ignores = ["*~" ".DS_Store" "*.swp" "*.swo"];
     extraConfig = {
       core = {
         editor = "vim";
