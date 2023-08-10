@@ -45,11 +45,17 @@
       wvous-br-corner = 4;
     };
 
-    NSGlobalDomain.AppleShowAllExtensions = true;
-    NSGlobalDomain.InitialKeyRepeat = 14;
-    NSGlobalDomain.KeyRepeat = 1;
-    NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
-
+    # https://macos-defaults.com/#🙋-what-s-a-defaults-command
+    NSGlobalDomain = {
+      AppleShowAllExtensions = true;
+      InitialKeyRepeat = 14;
+      KeyRepeat = 1;
+      NSAutomaticCapitalizationEnabled = false;
+      NSAutomaticDashSubstitutionEnabled = false;
+      NSAutomaticPeriodSubstitutionEnabled = false;
+      NSAutomaticQuoteSubstitutionEnabled = false;
+      NSAutomaticSpellingCorrectionEnabled = false;
+    };
     CustomSystemPreferences = {};
     CustomUserPreferences = {
       "mo.com.sleeplessmind.Wooshy" = {

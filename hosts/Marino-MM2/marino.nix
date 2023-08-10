@@ -2,11 +2,21 @@
   pkgs,
   pwnvim,
   ...
-}: {
+}:
+let
+  imports = [
+      ./yabairc.nix
+  ];
+in
+{
+
+  inherit imports;
+
   # Don't change this when you change package input. Leave it alone.
   home.stateVersion = "23.05";
   # specify my home-manager configs
   home.packages = with pkgs; [
+    thefuck
     ripgrep
     fd
     curl
@@ -31,13 +41,14 @@
   programs.zsh.syntaxHighlighting.enable = true;
   home.shellAliases = {
     ls = "ls --color=auto -F";
-    nixswitch = "darwin-rebuild switch --flake ~/_work/marino/nix-config.#";
+    nixswitch = "darwin-rebuild switch --flake ~/_work/marino/nix-config/.#";
     nixup = "pushd ~/_work/marino/nix-config; nix flake update; nixswitch; popd";
     gst = "git status";
     q = "exit";
     n = "npm";
     nr = "npm run";
     m = "make";
+    f = "thefuck";
   };
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;

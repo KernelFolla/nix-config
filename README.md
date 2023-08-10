@@ -13,7 +13,7 @@ I can perform this sort of magic thanks to amazing people who shared their own e
 
 - **[nix](https://nixos.org/)**: A package manager and a distribution-independent package manager system that focuses on declarative and functional package management.
 - **[nix-darwin](https://github.com/LnL7/nix-darwin)**: An extension of Nix that focuses on managing the configuration of macOS systems.
-- **[home-manager](https://github.com/nix-community/home-manager)**: An add-on for Nix that focuses on managing user-level environments.
+- **[home-manager](https://github.com/nix-community/home-manager)**: An add-on for Nix that focuses on managing user-level environments. Mainly dotfiles
 
 ## How
 

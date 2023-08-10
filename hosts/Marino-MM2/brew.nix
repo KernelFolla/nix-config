@@ -30,6 +30,7 @@
       "notion"
 
       
+      "karabiner-elements" # keyboard shortcuts
       "espanso" # text expander functionality (but open source donationware, x-platform, rust-based)
       # Keeping the next three together as they act in concert and are made by the same guy
       "kindavim" # ctrl-esc allows you to control an input area as if in vim normal mode
@@ -39,7 +40,6 @@
 
     brews = [
       "yabai" # window manager https://www.youtube.com/watch?v=k94qImbFKWE
-      "skhd" # keyboard shortcut manager
     ];
     masApps = { 
     };
