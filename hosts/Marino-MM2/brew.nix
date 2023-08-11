@@ -21,13 +21,14 @@
     casks = [
       # standard brew packages
 
-      # cask brew packages
+      #cask brew packages
       "dropbox"
       "jetbrains-toolbox"
       "iterm2"
       "logi-options-plus"
-      "orbstack" # docker desktop replacement (faster)
+      "orbstack" # docker desktop replacement (faster)
       "notion"
+      "warp" # term replacement
 
       
       "karabiner-elements" # keyboard shortcuts

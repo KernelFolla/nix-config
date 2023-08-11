@@ -58,6 +58,9 @@
     };
     CustomSystemPreferences = {};
     CustomUserPreferences = {
+      "com.apple.Safari" = {
+        WebAutomaticSpellingCorrectionEnabled = false;
+      };
       "mo.com.sleeplessmind.Wooshy" = {
         "KeyboardShortcuts_toggleWith" = "{\"carbonModifiers\":768,\"carbonKeyCode\":49}";
         SUEnableAutomaticChecks = 0;
