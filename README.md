@@ -19,6 +19,18 @@ I can perform this sort of magic thanks to amazing people who shared their own e
 
 TBD
 
+## Cool things
+
+- JSONnet is a domain-specific configuration language that's designed for generating JSON data structures. 
+- Karabiner is a powerful keyboard customization utility for macOS 
+- so I've used JSONnet to set up Karabiner configurations:)
+
+I've also added a script to compile all JSONnet files recursively.   
+
+```bash
+./bin/jsonnet-compile
+```
+
 ## Credits
 
 A big thank you to zmre for sharing their nix-config repository and providing inspiration for this configuration!
