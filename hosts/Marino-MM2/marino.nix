@@ -6,6 +6,7 @@
 let
   imports = [
       ./yabairc.nix
+      ./karabiner.nix
   ];
 in
 {
