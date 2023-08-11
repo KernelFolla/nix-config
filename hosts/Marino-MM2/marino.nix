@@ -1,4 +1,5 @@
 {
+  self,
   pkgs,
   pwnvim,
   ...
@@ -24,6 +25,9 @@ in
     less
     pwnvim.packages."aarch64-darwin".default
   ];
+  home.sessionPath = [
+    "$HOME/_work/marino/nix-config/bin"
+  ];
   home.sessionVariables = {
     PAGER = "less";
     CLICLOLOR = 1;
@@ -40,6 +44,8 @@ in
   programs.zsh.enableCompletion = true;
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.syntaxHighlighting.enable = true;
+
+  # https://nix-community.github.io/home-manager/options.html
   home.shellAliases = {
     ls = "ls --color=auto -F";
     nixswitch = "darwin-rebuild switch --flake ~/_work/marino/nix-config/.#";
@@ -51,6 +57,7 @@ in
     m = "make";
     f = "thefuck";
   };
+
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;
   programs.starship.settings.battery.disabled = true;

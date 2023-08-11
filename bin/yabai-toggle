@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# we use absolute path because this script is used in karabiner and karabiner doesn't have the full PATH
+
+# Check if Yabai service is running
+if pgrep -x "yabai" &> /dev/null; then
+    # Yabai is running, stop the service
+    /opt/homebrew/bin/yabai --stop-service
+    # osascript -e 'display notification "Service Stopped" with title "Yabai"'
+else
+    # Yabai is not running, start the service
+    /opt/homebrew/bin/yabai --start-service
+    # osascript -e 'display notification "Service Started" with title "Yabai"'
+fi
