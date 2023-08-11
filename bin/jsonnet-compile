@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Find all JSONnet files and compile them to JSON in the same directory
+find . -type f -name "*.jsonnet" -print0 | while IFS= read -r -d '' jsonnet_file; do
+    json_file="${jsonnet_file%.jsonnet}.json"  # Construct the corresponding JSON output path
+    echo "processing $jsonnet_file"
+    jsonnet -o "$json_file" "$jsonnet_file"    # Compile JSONnet to JSON
+done
+echo "done!"

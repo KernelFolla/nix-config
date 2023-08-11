@@ -41,6 +41,7 @@
 
     brews = [
       "yabai" # window manager https://www.youtube.com/watch?v=k94qImbFKWE
+      "jsonnet" #
     ];
     masApps = { 
     };
