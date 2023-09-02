@@ -23,6 +23,7 @@ in
     fd
     curl
     less
+    ncdu
     pwnvim.packages."aarch64-darwin".default
   ];
   home.sessionPath = [
@@ -40,10 +41,43 @@ in
   programs.fzf.enableZshIntegration = true;
   programs.exa.enable = true;
 
-  programs.zsh.enable = true;
-  programs.zsh.enableCompletion = true;
-  programs.zsh.enableAutosuggestions = true;
-  programs.zsh.syntaxHighlighting.enable = true;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
+    initExtra = ''
+        export PYENV_ROOT="$HOME/.pyenv"
+        export PATH="$PYENV_ROOT/bin:$PATH"
+        if command -v pyenv 1>/dev/null 2>&1; then
+            eval "$(pyenv init --path)"
+            # eval "$(pyenv virtualenv-init -)"
+        fi
+
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+        [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+        export JAVA_HOME=$(/usr/libexec/java_home)
+    '';
+  };
+  programs.fish = {
+    enable = true;
+    loginShellInit = ''
+        set -x PYENV_ROOT $HOME/.pyenv'
+        set -x PATH $PYENV_ROOT/bin $PATH'
+        status --is-interactive; and source (pyenv init -|psub)'
+        # status --is-interactive; and source (pyenv virtualenv-init -|psub)'
+
+
+        # install plugins installer
+        if not functions -q fisher
+            curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+            fish -c fisher
+        end
+
+    '';
+  };
+
 
   # https://nix-community.github.io/home-manager/options.html
   home.shellAliases = {
@@ -56,6 +90,10 @@ in
     nr = "npm run";
     m = "make";
     f = "thefuck";
+    p = "python";
+    pm = "python manage.py";
+    pmm = "python manage.py migrate";
+    pmmm = "python manage.py makemigrations";
   };
 
   programs.starship.enable = true;
@@ -84,9 +122,6 @@ in
         rebase = true;
       };
     };
-  };
-  programs.fish = {
-    enable = true;
   };
   # home.file.".inputrc".source = ./dotfiles/inputrc;
 }

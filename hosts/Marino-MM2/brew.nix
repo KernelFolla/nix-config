@@ -13,7 +13,7 @@
     };
     caskArgs.no_quarantine = true;
     global.brewfile = true;
-    
+
     taps = [
       "koekeishiya/formulae"
     ];
@@ -30,7 +30,11 @@
       "notion"
       "warp" # term replacement
 
-      
+      "google-chrome"
+      "firefox"
+      "brave-browser"
+
+
       "karabiner-elements" # keyboard shortcuts
       "espanso" # text expander functionality (but open source donationware, x-platform, rust-based)
       # Keeping the next three together as they act in concert and are made by the same guy
@@ -42,8 +46,9 @@
     brews = [
       "yabai" # window manager https://www.youtube.com/watch?v=k94qImbFKWE
       "jsonnet" #
+      "nvm"
     ];
-    masApps = { 
+    masApps = {
     };
   };
 }
