@@ -8,7 +8,16 @@
   environment = {
     shells = with pkgs; [bash zsh fish];
     loginShell = pkgs.zsh;
-    systemPackages = [pkgs.coreutils];
+    systemPackages = [
+      pkgs.coreutils
+      pkgs.curl
+      pkgs.jq
+      pkgs.xz # used by pyenv
+      pkgs.pyenv
+      pkgs.poetry
+      pkgs.glow
+      pkgs.openjdk
+    ];
     systemPath = ["/opt/homebrew/bin"];
     pathsToLink = ["/Applications"];
   };
@@ -22,8 +31,24 @@
   fonts.fonts = [(pkgs.nerdfonts.override {fonts = ["Meslo"];})];
   services.nix-daemon.enable = true;
   system.defaults = {
-    finder.AppleShowAllExtensions = true;
-    finder._FXShowPosixPathInTitle = true;
+    finder = {
+      # Necessary for true finder, instead of Finder embeds.
+      AppleShowAllExtensions = true;
+      # Don't show icons on the desktop.
+      CreateDesktop = false;
+      # Search in the current folder, instead of the whole mac.
+      FXDefaultSearchScope = "SCcf";
+      # Don't warn us on changing a file extension.
+      FXEnableExtensionChangeWarning = false;
+      # Defeault to the list view in Finder windows.
+      FXPreferredViewStyle = "Nlsv";
+      # Show the pathbar, which gives us breadcrumbs to the current folder.
+      ShowPathbar = true;
+      # Show the status bar, which has some useful metadata.
+      ShowStatusBar = true;
+      # Use the POSIX path in the finder title, rather than just the folder name.
+      _FXShowPosixPathInTitle = true;
+    };
     dock = {
       # auto show and hide dock
       autohide = true;
@@ -58,6 +83,15 @@
     };
     CustomSystemPreferences = {};
     CustomUserPreferences = {
+      "com.apple.menuextra.clock" = {
+        IsAnalog = 0;
+        ShowAMPM = 0;
+        ShowDate = 0;
+        ShowDayOfWeek = 1;
+      };
+      "com.apple.controlcenter" = {
+        "NSStatusItem Visible Bluetooth" = 1;
+      };
       "com.apple.Safari" = {
         WebAutomaticSpellingCorrectionEnabled = false;
       };
