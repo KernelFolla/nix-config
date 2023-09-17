@@ -25,6 +25,7 @@ in
     less
     ncdu
     pwnvim.packages."aarch64-darwin".default
+    bun
   ];
   home.sessionPath = [
     "$HOME/_work/marino/nix-config/bin"
