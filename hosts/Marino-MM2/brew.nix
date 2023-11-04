@@ -23,6 +23,7 @@
 
       #cask brew packages
       "dropbox"
+      # "slack"
       "jetbrains-toolbox"
       "iterm2"
       "logi-options-plus"
@@ -38,9 +39,10 @@
       "karabiner-elements" # keyboard shortcuts
       "espanso" # text expander functionality (but open source donationware, x-platform, rust-based)
       # Keeping the next three together as they act in concert and are made by the same guy
-      "kindavim" # ctrl-esc allows you to control an input area as if in vim normal mode
-      "scrolla" # use vim commands to select scroll areas and scroll
-      "wooshy" # use cmd-shift-space to bring up search to select interface elements in current app
+      # "kindavim" # ctrl-esc allows you to control an input area as if in vim normal mode
+      # "scrolla" # use vim commands to select scroll areas and scroll
+      # "wooshy" # use cmd-shift-space to bring up search to select interface elements in current app
+      # "switchhosts" # a tool to manage hostnames
     ];
 
     brews = [
