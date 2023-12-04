@@ -16,11 +16,13 @@
 
     taps = [
       "koekeishiya/formulae"
+      "homebrew/services"
     ];
 
     casks = [
       # standard brew packages
 
+      "caffeine"
       #cask brew packages
       "dropbox"
       # "slack"
@@ -30,11 +32,15 @@
       "orbstack" # docker desktop replacement (faster)
       "notion"
       "warp" # term replacement
+      "microsoft-teams"
+      "obsidian"
+      "telegram"
+      "redis-cli"
+      "whatsapp"
 
       "google-chrome"
       "firefox"
       "brave-browser"
-
 
       "karabiner-elements" # keyboard shortcuts
       "espanso" # text expander functionality (but open source donationware, x-platform, rust-based)
@@ -49,6 +55,18 @@
       "yabai" # window manager https://www.youtube.com/watch?v=k94qImbFKWE
       "jsonnet" #
       "nvm"
+
+      # django deps
+      "weasyprint"
+      "cairo"
+      "pango"
+      "libffi"
+      "gobject-introspection"
+      "pkgconfig"
+      "mysql"
+      "redis"
+
+
     ];
     masApps = {
     };

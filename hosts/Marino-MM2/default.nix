@@ -12,6 +12,7 @@
       pkgs.coreutils
       pkgs.curl
       pkgs.jq
+      pkgs.html2text
       pkgs.xz # used by pyenv
       pkgs.pyenv
       pkgs.poetry
