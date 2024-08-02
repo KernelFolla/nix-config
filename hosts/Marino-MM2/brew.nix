@@ -35,7 +35,6 @@
       "microsoft-teams"
       "obsidian"
       "telegram"
-      "redis-cli"
       "whatsapp"
 
       "google-chrome"
@@ -49,6 +48,8 @@
       # "scrolla" # use vim commands to select scroll areas and scroll
       # "wooshy" # use cmd-shift-space to bring up search to select interface elements in current app
       # "switchhosts" # a tool to manage hostnames
+      "postman"
+      "redis-pro"
     ];
 
     brews = [
