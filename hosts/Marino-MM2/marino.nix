@@ -26,6 +26,7 @@ in
     ncdu
     pwnvim.packages."aarch64-darwin".default
     bun
+    lftp
   ];
   home.sessionPath = [
     "$HOME/_work/marino/nix-config/bin"
