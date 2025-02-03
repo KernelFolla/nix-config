@@ -24,7 +24,7 @@
     ...
   }: {
     # you can have multiple darwinConfigurations per flake, one per hostname
-    darwinConfigurations."Marino-MM2" = darwin.lib.darwinSystem {
+    darwinConfigurations."MARINO-MM2" = darwin.lib.darwinSystem {
       # "x86_64-darwin" if you're using a pre M1 mac
       system = "aarch64-darwin";
       pkgs = import nixpkgs {system = "aarch64-darwin";};

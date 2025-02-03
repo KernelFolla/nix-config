@@ -68,9 +68,7 @@
       # "gobject-introspection"
       "pkgconfig"
       "mysql"
-      "redis"
-
-
+      # "redis"
     ];
     masApps = {
     };
