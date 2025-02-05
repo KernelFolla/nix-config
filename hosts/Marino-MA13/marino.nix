@@ -25,6 +25,7 @@ in
     pwnvim.packages."aarch64-darwin".default
     bun
     lftp
+    vulnix
   ];
   home.sessionPath = [
     "$HOME/_work/m/nix-config/bin"

@@ -19,13 +19,58 @@ I can perform this sort of magic thanks to amazing people who shared their own e
 
 TBD
 
+## First setup
+
+### 1. Install Nix
+
+Follow the official method to install nix:
+
+```bash
+curl -L https://nixos.org/nix/install | sh
+```
+Ensure to close and reopen terminal to apply changes.
+
+### 2. Add channels
+
+This adds home-manager and nix-darwin channels
+
+```bash
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --add https://github.com/LnL7/nix-darwin/archive/master.tar.gz darwin
+nix-channel --update
+```
+
+### 3. Install Brew
+
+Follow the official method to install Brew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+### 4. run nix darwin rebuild
+
+```bash
+nix-build '<darwin>' -A darwin-rebuild
+```
+
+### 5. run nix switch
+
+be sure to have committed the repo with your new host
+
+```bash
+nix --extra-experimental-features "nix-command flakes"  run nix-darwin/master#darwin-rebuild -- switch
+```
+
+
+
 ## Cool things
 
 - JSONnet is a domain-specific configuration language that's designed for generating JSON data structures. 
 - Karabiner is a powerful keyboard customization utility for macOS 
 - so I've used JSONnet to set up Karabiner configurations:)
 
-I've also added a script to compile all JSONnet files recursively.   
+I've also added a script to compile all JSONnet files recursively.	 
 
 ```bash
 ./bin/jsonnet-compile
