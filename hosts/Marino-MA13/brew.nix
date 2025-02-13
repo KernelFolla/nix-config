@@ -28,10 +28,16 @@
       "microsoft-teams"
       "google-chrome"
       "onyx"
+      "coconutbattery"
+      "figma"
+      "element"
+      "visual-studio-code@insiders"
+      "webex"
     ];
 
     brews = [
       "nvm"
+      "pyenv"
     ];
     masApps = {
     };

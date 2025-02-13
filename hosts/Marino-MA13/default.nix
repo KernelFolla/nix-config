@@ -13,11 +13,10 @@
       pkgs.curl
       pkgs.jq
       pkgs.html2text
-      pkgs.xz # used by pyenv
-      pkgs.pyenv
+      pkgs.pipx
       pkgs.poetry
       pkgs.glow
-      pkgs.openjdk
+      pkgs.gh
     ];
     systemPath = ["/opt/homebrew/bin"];
     pathsToLink = ["/Applications"];
@@ -26,8 +25,8 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
-  system.keyboard.enableKeyMapping = true;
-  system.keyboard.remapCapsLockToEscape = true;
+  system.keyboard.enableKeyMapping = false;
+  system.keyboard.remapCapsLockToEscape = false;
   fonts.fontDir.enable = true; # DANGER
   fonts.fonts = [(pkgs.nerdfonts.override {fonts = ["Meslo"];})];
   services.nix-daemon.enable = true;
@@ -92,49 +91,6 @@
       };
       "com.apple.controlcenter" = {
         "NSStatusItem Visible Bluetooth" = 1;
-      };
-      # "com.apple.Safari" = {
-      #  WebAutomaticSpellingCorrectionEnabled = false;
-      # };
-      "mo.com.sleeplessmind.Wooshy" = {
-        "KeyboardShortcuts_toggleWith" = "{\"carbonModifiers\":768,\"carbonKeyCode\":49}";
-        SUEnableAutomaticChecks = 0;
-        SUUpdateGroupIdentifier = 3425398139;
-        allowCyclingThroughTargets = 1;
-        "com_apple_SwiftUI_Settings_selectedTabIndex" = 4;
-        fuzzyMatchingFlavor = "wooshyClassic";
-        hazeOverWindowStyle = "fadeOutExceptDockMenuBarAndFrontmostApp";
-        inputPosition = "aboveWindow";
-        inputPreset = "custom";
-        inputTextSize = 20;
-        searchIncludesTrafficLightButtons = 1;
-      };
-      "mo.com.sleeplessmind.kindaVim" = {
-        "KeyboardShortcuts_enterNormalMode" = "{\"carbonModifiers\":4096,\"carbonKeyCode\":53}";
-        "NSStatusItem Preferred Position Item-0" = 6009;
-        SUEnableAutomaticChecks = 0;
-        SUUpdateGroupIdentifier = 790660886;
-        appsForWhichToEnforceElectron = "[\"com.superhuman.electron\"]";
-        appsForWhichToEnforceKeyboardStrategy = "[\"mo.com.sleeplessmind.Wooshy\"]";
-        appsForWhichToUseHybridMode = "[\"com.apple.Safari\"]";
-        appsToAdviseFor = "[\"com.apple.mail\"]";
-        appsToIgnore = "[\"io.alacritty\",\"com.microsoft.VSCode\"]";
-        charactersWindowContent = "move";
-        "com_apple_SwiftUI_Settings_selectedTabIndex" = 0;
-        enableCommandPassthrough = 1;
-        enableOptionPassthrough = 1;
-        enterNormalModeWith = "customShortcut";
-        hazeOverWindowNonFullScreenOpacity = "0.5173477564102564";
-        sendEscapeToMacOSWith = "commandEscape";
-        showCharactersWindow = 0;
-      };
-      "mo.com.sleeplessmind.Scrolla" = {
-        "KeyboardShortcuts_toggleWith" = "{\"carbonModifiers\":4352,\"carbonKeyCode\":49}";
-        "NSStatusItem Preferred Position Item-0" = 6276;
-        SUEnableAutomaticChecks = 0;
-        SUUpdateGroupIdentifier = 3756402529;
-        "com_apple_SwiftUI_Settings_selectedTabIndex" = 0;
-        ignoreAreasWithoutScrollBars = 0;
       };
     };
   };
