@@ -7,7 +7,6 @@
   programs.zsh.enable = true;
   environment = {
     shells = with pkgs; [bash zsh fish];
-    loginShell = pkgs.zsh;
     systemPackages = [
       pkgs.coreutils
       pkgs.curl
@@ -17,6 +16,7 @@
       pkgs.poetry
       pkgs.glow
       pkgs.gh
+      pkgs.openjdk
     ];
     systemPath = ["/opt/homebrew/bin"];
     pathsToLink = ["/Applications"];
@@ -27,9 +27,9 @@
   '';
   system.keyboard.enableKeyMapping = false;
   system.keyboard.remapCapsLockToEscape = false;
-  fonts.fontDir.enable = true; # DANGER
-  fonts.fonts = [(pkgs.nerdfonts.override {fonts = ["Meslo"];})];
-  services.nix-daemon.enable = true;
+  # fonts.packages = [
+  #   pkgs.nerd-fonts.meslo
+  # ];
   system.defaults = {
     finder = {
       # Necessary for true finder, instead of Finder embeds.
@@ -96,4 +96,5 @@
   };
   # backwards compat; don't change
   system.stateVersion = 4;
+  ids.gids.nixbld = 350;
 }

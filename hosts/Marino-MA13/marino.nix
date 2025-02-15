@@ -40,12 +40,12 @@ in
   programs.bat.config.theme = "TwoDark";
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
-  programs.exa.enable = true;
+  programs.eza.enable = true;
 
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initExtra = ''
         export PYENV_ROOT="$HOME/.pyenv"
