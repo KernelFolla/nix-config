@@ -7,8 +7,8 @@
   homebrew = {
     enable = true;
     onActivation = {
-      autoUpdate = false;
-      upgrade = false;
+      autoUpdate = true;
+      upgrade = true;
       cleanup = "uninstall"; # should maybe be "zap" - remove anything not listed here
     };
     caskArgs.no_quarantine = true;
@@ -20,14 +20,9 @@
     ];
 
     casks = [
-      # standard brew packages
-
       "caffeine"
-      #cask brew packages
       "dropbox"
-      # "slack"
       "jetbrains-toolbox"
-      "iterm2"
       "orbstack" # docker desktop replacement (faster)
       "notion"
       "warp" # term replacement
@@ -35,11 +30,9 @@
       "obsidian"
       "telegram"
       "whatsapp"
-
       "google-chrome"
       "firefox"
       "brave-browser"
-
       # "karabiner-elements" # keyboard shortcuts
       # "espanso" # text expander functionality (but open source donationware, x-platform, rust-based)
       # Keeping the next three together as they act in concert and are made by the same guy
@@ -49,10 +42,10 @@
       # "switchhosts" # a tool to manage hostnames
       "postman"
       # "redis-pro"
-
       # "cursor"
       "mockoon"
       "onyx"
+      "visual-studio-code@insiders"
     ];
 
     brews = [
@@ -69,6 +62,7 @@
       "pkgconfig"
       "mysql"
       # "redis"
+      "pyenv"
     ];
     masApps = {
     };

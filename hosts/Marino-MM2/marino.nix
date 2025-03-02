@@ -27,6 +27,7 @@ in
     pwnvim.packages."aarch64-darwin".default
     bun
     lftp
+    vulnix
   ];
   home.sessionPath = [
     "$HOME/_work/marino/nix-config/bin"
@@ -41,12 +42,12 @@ in
   programs.bat.config.theme = "TwoDark";
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
-  programs.exa.enable = true;
+  programs.eza.enable = true;
 
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     initExtra = ''
         export PYENV_ROOT="$HOME/.pyenv"
