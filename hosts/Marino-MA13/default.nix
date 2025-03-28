@@ -8,15 +8,6 @@
   environment = {
     shells = with pkgs; [bash zsh fish];
     systemPackages = [
-      pkgs.coreutils
-      pkgs.curl
-      pkgs.jq
-      pkgs.html2text
-      pkgs.pipx
-      pkgs.poetry
-      pkgs.glow
-      pkgs.gh
-      pkgs.openjdk
     ];
     systemPath = ["/opt/homebrew/bin"];
     pathsToLink = ["/Applications"];

@@ -20,22 +20,31 @@
     ];
 
     casks = [
-      "caffeine"
       "dropbox"
-      "jetbrains-toolbox"
-      "orbstack" # docker desktop replacement (faster)
-      "warp" # term replacement
-      "microsoft-teams"
       "google-chrome"
+      # dev ide
+      "jetbrains-toolbox"
+      "figma"
+      "visual-studio-code@insiders"
+      # dev tools
+      "warp" # term replacement
+      "orbstack" # docker desktop replacement (faster)
+      # chats
+      "element"
+      "microsoft-teams"
+      "webex"
+      # osx tools
+      "caffeine"
       "onyx"
       "coconutbattery"
-      "figma"
-      "element"
-      "visual-studio-code@insiders"
-      "webex"
+      "jordanbaird-ice"
     ];
 
     brews = [
+      "ripgrep"
+      "ncdu"
+      "openjdk"
+      # dev tools
       "nvm"
       "pyenv"
     ];
