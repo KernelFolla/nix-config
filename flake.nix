@@ -63,6 +63,25 @@
         }
       ];
     };
+     darwinConfigurations."Marino-M4" = darwin.lib.darwinSystem {
+      system = "aarch64-darwin";
+      pkgs = import nixpkgs {system = "aarch64-darwin";};
+      modules = [
+        ./hosts/Marino-M4/default.nix
+        {
+          users.users.marino.home = "/Users/marino";
+        }
+        inputs.home-manager.darwinModules.home-manager
+        {
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            extraSpecialArgs = {inherit pwnvim;};
+            users.marino.imports = [./hosts/Marino-M4/marino.nix];
+          };
+        }
+      ];
+    };
  
   };
 }
