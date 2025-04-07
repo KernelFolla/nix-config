@@ -33,6 +33,7 @@
       "element"
       "microsoft-teams"
       "webex"
+      "whatsapp"
       # osx tools
       "caffeine"
       "onyx"
