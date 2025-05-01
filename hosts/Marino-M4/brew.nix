@@ -16,7 +16,7 @@
 
     taps = [
       "koekeishiya/formulae"
-      "homebrew/services"
+      # "homebrew/services"
     ];
 
     casks = [
@@ -30,15 +30,13 @@
       "warp" # term replacement
       "orbstack" # docker desktop replacement (faster)
       # chats
-      "element"
       "microsoft-teams"
-      "webex"
       "whatsapp"
       # osx tools
       "caffeine"
       "onyx"
       "coconutbattery"
-      "jordanbaird-ice"
+      # "jordanbaird-ice"
     ];
 
     brews = [
@@ -48,6 +46,7 @@
       # dev tools
       "nvm"
       "pyenv"
+      "uv"
     ];
     masApps = {
     };
