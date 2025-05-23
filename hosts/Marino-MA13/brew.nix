@@ -30,9 +30,7 @@
       "warp" # term replacement
       "orbstack" # docker desktop replacement (faster)
       # chats
-      "element"
       "microsoft-teams"
-      "webex"
       "whatsapp"
       # osx tools
       "caffeine"
