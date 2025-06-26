@@ -37,6 +37,8 @@
       "onyx"
       "coconutbattery"
       # "jordanbaird-ice"
+      # AI
+      "claude"
     ];
 
     brews = [
@@ -47,6 +49,8 @@
       "nvm"
       "pyenv"
       "uv"
+      "awscli"
+      "mkcert"
     ];
     masApps = {
     };

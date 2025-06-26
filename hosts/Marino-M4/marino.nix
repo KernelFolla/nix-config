@@ -46,7 +46,8 @@ in {
       export NVM_DIR="$HOME/.nvm"
       [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
       [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-      export JAVA_HOME=$(/usr/libexec/java_home)
+      export JAVA_HOME="/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
+      export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
       export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
       export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
       export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
