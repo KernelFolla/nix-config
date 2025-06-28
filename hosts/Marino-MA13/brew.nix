@@ -29,6 +29,8 @@
       # dev tools
       "warp" # term replacement
       "orbstack" # docker desktop replacement (faster)
+      # ios things
+      "cocoapods"
       # chats
       "microsoft-teams"
       "whatsapp"
@@ -37,6 +39,8 @@
       "onyx"
       "coconutbattery"
       "jordanbaird-ice"
+      # AI
+      "claude"
     ];
 
     brews = [
@@ -46,6 +50,9 @@
       # dev tools
       "nvm"
       "pyenv"
+      "uv"
+      "awscli"
+      "mkcert"
     ];
     masApps = {
     };

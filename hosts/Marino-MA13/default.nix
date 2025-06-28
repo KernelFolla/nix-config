@@ -85,6 +85,8 @@
       };
     };
   };
+  # Set primary user for nix-darwin compatibility
+  system.primaryUser = "marino";
   # backwards compat; don't change
   system.stateVersion = 4;
   ids.gids.nixbld = 350;

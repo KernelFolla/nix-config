@@ -99,7 +99,7 @@ in {
     enable = true;
     userEmail = "kernelfolla@gmail.com";
     userName = "Marino Di Clemente";
-    ignores = ["*~" ".DS_Store" "*.swp" "*.swo"];
+    ignores = ["*~" ".DS_Store" "*.swp" "*.swo", "CLAUDE.md", ".claude"];
     extraConfig = {
       core = {
         editor = "vim";
